@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MVC - Demo</title>
+
+    <style>
+
+        /*
+        This project  is very simple one. thats why i code internal css. but if you design your own web page , write css as a external file!
+        */
+
+        form{
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container,.row,.col-10{
+            width: 100%;
+            height: 50vh;
+        }
+
+        input{
+            margin-bottom: 20px;
+        }
+
+        .btns{
+            width: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        table{
+            width: 600px;
+        }
+
+        tr{
+            width: 600px;
+            border: 1px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <h3 style="text-align: center">Simple User Registration Form.</h3>
+                <form  class="form-control">
+
+                    <label for="f_name">First Name</label>
+                    <input type="text" name="fName" id="f_name">
+
+                    <label for="l_name">Last Name</label>
+                    <input type="text" name="lName" id="l_name">
+
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age">
+
+                    <label for="birth_day">Birth Date</label>
+                    <input type="date" name="birthDay" id="birth_day">
+
+                    <div class="btns">
+                        <button type="submit" id="submitBtn">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-10">
+                <table style="border: 1px solid red">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Age</th>
+                            <th>Date of birth</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./User.js"></script>
+    <script src="userController.js"></script>
+</body>
+</html>
